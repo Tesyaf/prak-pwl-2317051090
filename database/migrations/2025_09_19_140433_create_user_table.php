@@ -12,7 +12,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama');
             $table->string('npm')->unique();
-            $table->string('kelas');
+            $table->foreignId('kelas_id')->constrained('kelas')->cascadeOnUpdate()->restrictOnDelete();
             $table->timestamps();
         });
     }
