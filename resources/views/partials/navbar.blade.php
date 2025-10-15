@@ -6,6 +6,10 @@
       </a>
 
       <div class="flex items-center gap-6">
+        <a href="{{ route('matakuliah.index') }}"
+           class="text-sm {{ request()->routeIs('matakuliah.index') ? 'text-white' : 'text-white/70 hover:text-white' }}">
+          Matakuliah
+        </a>
         <a href="{{ route('user.index') }}"
            class="text-sm {{ request()->routeIs('user.index') ? 'text-white' : 'text-white/70 hover:text-white' }}">
           Daftar Pengguna
@@ -13,12 +17,6 @@
         <a href="{{ route('user.create') }}"
            class="text-sm {{ request()->routeIs('user.create') ? 'text-white' : 'text-white/70 hover:text-white' }}">
           Buat Pengguna
-        </a>
-
-        <a href="{{ route('user.create') }}"
-           class="hidden sm:inline-flex items-center rounded-xl px-4 py-2 text-xs font-semibold text-blue-900
-                  bg-white hover:opacity-90 shadow-lg/30">
-          + Tambah
         </a>
       </div>
     </div>
